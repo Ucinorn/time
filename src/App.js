@@ -1,26 +1,41 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container, Row, Col } from 'reactstrap';
+//import logo from './logo.svg';
+//import './App.css';
+import Timebar from './components/timebar.js';
+import Stats from './components/stats.js';
+import Actions from './components/actions.js';
+import Queue from './components/queue.js';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+      <Container className="App">
+				  <header className="App-header">
+					<Row>
+						<Col>
+							About Time
+						</Col>
+						<Col>
+							<Timebar/>
+						</Col>
+					</Row>
+					<Row>
+						<Col>
+							<h2>Stats</h2>
+							<Stats/>
+						</Col>
+						<Col>
+							<h2>Actions</h2>
+							<Actions/>
+						</Col>
+						<Col>
+							<h2>Queue</h2>
+							<Queue/>
+						</Col>
+					</Row>
         </header>
-      </div>
+      </Container>
     );
   }
 }
