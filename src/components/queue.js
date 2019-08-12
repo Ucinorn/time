@@ -16,7 +16,7 @@ class Queue extends Component {
     return (
       <Row>
       	<Col>
-					{game.gold} / {game.startingGold}
+				
 				</Col>
 				<Col>
 

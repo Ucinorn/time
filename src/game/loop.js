@@ -43,6 +43,9 @@ const Loop = {
 		} else {
 			this.resetTime();
 		}
+
+		// tick through any actions that are queued
+		if (store.queue.length)
 	},
 	onSecond(){},
 	onMinute(){},
@@ -52,6 +55,34 @@ const Loop = {
 	resetTime(){
 		store.gold = store.startingGold;
 		this.currentTick = 0;
+	},
+
+	// whenever you gain gold it adds to your current time total
+	gainGold(amount) {
+		if (typeof amount == "number") {
+			store.gold += amount
+		} else {
+			store.gold ++
+		}
+	},
+
+	queueAction(action) {
+		// check the action exists
+		if (! action in store.actions) { return	}
+		let newaction = Object.assign({}, store.actions[a])
+		store.queue.push(newaction)
+	},
+
+	tickAction() {
+		if (store.queue.length == 0) {return}
+		let a = store.queue[0]
+		if (a) {
+
+		}
+	}
+
+	completeAction(action, gold) {
+
 	},
 
 

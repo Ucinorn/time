@@ -4,6 +4,9 @@ import store from '../store/store.js'
 
 class Stat extends Component {
   render() {
+
+		const stat = this.props.att
+
 		if (this.props.level < 1) {
 			return <div/>
 		}
@@ -11,8 +14,9 @@ class Stat extends Component {
 	  return (
 	      <Row>
 					<Col>{this.props.name}</Col>
-					<Col>{this.props.level}</Col>
-					<Col>{this.props.name}</Col>
+					<Col>{stat.base}</Col>
+					<Col>{stat.multi}</Col>
+					<Col>{stat.base}</Col>
 				</Row>
 	  );
   }

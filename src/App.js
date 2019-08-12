@@ -22,15 +22,15 @@ class App extends Component {
 					</Row>
 					<Row>
 						<Col>
-							<h2>Stats</h2>
+							<h4>Stats</h4>
 							<Stats/>
 						</Col>
 						<Col>
-							<h2>Actions</h2>
+							<h4>Actions</h4>
 							<Actions/>
 						</Col>
 						<Col>
-							<h2>Queue</h2>
+							<h4>Queue</h4>
 							<Queue/>
 						</Col>
 					</Row>
